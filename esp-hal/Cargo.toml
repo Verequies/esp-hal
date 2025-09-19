@@ -61,8 +61,8 @@ esp-rom-sys              = { version = "0.1.1", path = "../esp-rom-sys" }
 bitfield                 = "0.19.0"
 delegate                 = "0.13.3"
 document-features        = "0.2.11"
-embassy-futures          = "0.1"
-embassy-sync             = "0.7"
+embassy-futures          = { git = "https://github.com/embassy-rs/embassy", branch = "main", package = "embassy-futures" }
+embassy-sync             = { git = "https://github.com/embassy-rs/embassy", branch = "main", package = "embassy-sync" }
 fugit                    = "0.3.7"
 instability              = "0.3.9"
 strum                    = { version = "0.27.1", default-features = false, features = ["derive"] }

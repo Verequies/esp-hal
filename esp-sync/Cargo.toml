@@ -22,8 +22,7 @@ clippy-configs = [{ features = ["defmt"] }]
 cfg-if = "1"
 document-features = "0.2"
 esp-metadata-generated = { version = "0.1.0", path = "../esp-metadata-generated" }
-embassy-sync-06 = { package = "embassy-sync", version = "0.6" }
-embassy-sync-07 = { package = "embassy-sync", version = "0.7" }
+embassy-sync = { git = "https://github.com/embassy-rs/embassy", branch = "main", package = "embassy-sync" }
 
 # Logging interfaces, they are mutually exclusive so they need to be behind separate features.
 defmt  = { version = "1.0.1", optional = true }
