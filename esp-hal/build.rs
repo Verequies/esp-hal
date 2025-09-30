@@ -23,9 +23,7 @@ macro_rules! assert_unique_features {
 
 fn main() -> Result<(), Box<dyn Error>> {
     // if using '"rust-analyzer.cargo.buildScripts.useRustcWrapper": true' we can detect this
-    let suppress_panics = std::env::var("RUSTC_WRAPPER")
-        .unwrap_or_default()
-        .contains("rust-analyzer");
+    let suppress_panics = std::env::var("ESP_HAL_SUPPRESS_PANIC").is_ok();
 
     println!("cargo:rustc-check-cfg=cfg(is_debug_build)");
     if let Ok(level) = std::env::var("OPT_LEVEL")
